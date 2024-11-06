@@ -1,4 +1,5 @@
 FROM swr.cn-east-3.myhuaweicloud.com/op_svc_cse/openjdk-x86_64:17-1.2.0
+RUN sleep 30000
 WORKDIR /home/app/
 ADD nacos-spring-cloud-provider-example/target/nacos-spring-cloud-provider-example-0.2.0-SNAPSHOT.jar .
 ENTRYPOINT ["java","-jar","-Xmx2048m","./nacos-spring-cloud-provider-example-0.2.0-SNAPSHOT.jar"]
